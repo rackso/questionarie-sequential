@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ReactDOM from "react-dom"
+import '../../scss/estilos.scss';
 
 const ll = alfa => { return `${alfa}` }
 
@@ -20,12 +21,12 @@ class FormContainer extends Component {
 
   render() {
     return (
-        <h1>Hola {ll('oscar')}</h1>
+        <h1 className="tipo">Hola {ll('oscar')}</h1>
     )
   }
 }
 
 export default FormContainer
 
-const wrapper = document.getElementById("create-article-form")
+const wrapper = document.getElementById("app")
 wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false
