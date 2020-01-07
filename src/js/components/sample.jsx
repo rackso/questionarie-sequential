@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import ReactDOM from "react-dom"
-import '../../scss/estilos.scss';
+import $ from 'jquery'
+
+import '../../scss/estilos.scss'
 
 const ll = alfa => { return `${alfa}` }
 
@@ -16,12 +18,12 @@ class FormContainer extends Component {
   }
 
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value })
+    $('h1').each((idx, fn) => {console.log(fn)})
   }
 
   render() {
     return (
-        <h1 className="tipo">Hola {ll('oscar')}</h1>
+        <h1 className="tipo" onClick={this.handleChange}>Hola {ll('oscar')}</h1>
     )
   }
 }
