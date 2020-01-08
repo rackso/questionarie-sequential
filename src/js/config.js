@@ -1,6 +1,8 @@
 const config = {
-  defaultmaxtime: 30,
-  defaultreadingtime: 20
+  defaultquestiontime: 20,
+  defaultprevioustime: 20,
+  defaultfinaltime: 20,
+  defaultintroimage: 'image'
 }
 
 export default config

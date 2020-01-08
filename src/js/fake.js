@@ -4,24 +4,37 @@ const fake = {
         type: 'lineal',
         hash: '1',
         text: 'enunciado lineal',
-        minvalue: 0,
-        maxvalue: 1000,
-        maxtime: 20
+        timer: 20,
+        previous: {
+          image: '',
+          text: 'previous text',
+          timer: 20
+        },
+        final: {
+          image: '',
+          text: 'final text',
+        },
+        values: {
+          minvalue: 0,
+          maxvalue: 1000
+        }
       },
       {
         type: 'sphere',
         hash: '1',
         text: 'enunciado sphere',
-        minvaluex: 0,
-        maxvaluex: 1000,
-        minvaluey: 0,
-        maxvaluey: 1000
+        values: {
+          minvaluex: 0,
+          maxvaluex: 1000,
+          minvaluey: 0,
+          maxvaluey: 1000
+        }
       },
       {
         type: 'single',
         hash: '1',
         text: 'enunciado single',
-        responses: [
+        values: [
           {
             hash: 'singleresponse1',
             text: 'single response 1'
@@ -44,7 +57,7 @@ const fake = {
         type: 'multiple',
         hash: '1',
         text: 'enunciado multiple',
-        responses: [
+        values: [
           {
             hash: 'singleresponse1',
             text: 'multiple response 1'
@@ -67,7 +80,7 @@ const fake = {
         type: 'sort',
         hash: '1',
         text: 'enunciado sort',
-        elements: [
+        values: [
           {
             hash: 'singleresponse1',
             text: 'sort 1'
@@ -90,7 +103,7 @@ const fake = {
         type: 'match',
         hash: '1',
         text: 'enunciado match',
-        elements: [
+        values: [
           {
             hash: 'singleresponse1',
             text: 'match 1'
@@ -125,7 +138,11 @@ const fake = {
           }
         ]
       }
-    ]
+    ],
+    userhash: 'userhash',
+    text: 'texto introductorio del test',
+    titular: 'titular',
+    imagen: ''
   }
 
 export default fake

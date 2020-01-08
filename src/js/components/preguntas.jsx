@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"
 class Preguntas extends Component {
 
   render() {
-    return (<div className="noblock"></div>)
+    return (<div className="noblock">preguntas</div>)
   }
 }
 

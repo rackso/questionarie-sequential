@@ -1,3 +1,6 @@
+@import './_settings';
+
 body {
-    background-color: aquamarine;
+    background-color: $c-white;
+    color: $c-black;
 }

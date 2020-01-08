@@ -8,9 +8,9 @@ import Resultado from './resultado.jsx'
 
 import UseCases from '../usecases.js'
 
-import '../../scss/questionaire.scss'
+import '../../scss/app.scss'
 
-class FormContainer extends Component {
+class App extends Component {
 
   constructor() {
     super()
@@ -34,8 +34,9 @@ class FormContainer extends Component {
 
   render() {
     const {data, level} = this.state
+    if (typeof data === 'undefined') return null
 
-    console.log(data, level)
+    const { text, titular, imagen, defaultintroimage } = data
 
     // Levels
     // 0: Spinner mientras se carga
@@ -46,13 +47,31 @@ class FormContainer extends Component {
     return (
         <div className="questionaire">
             {level === 0 && <WaitForIt />}
-            {level === 1 && data && <Presentation data={data} onNext={this.nextSection} />}
-            {level === 2 && <Preguntas onNext={this.nextSection} />}
-            {level === 3 && <Resultado onNext={this.nextSection} />}
-            {level === 4 && <Followme />}
+            {level === 1 &&
+              <Presentation
+                numquestions={data.questions.length}
+                image={imagen || defaultintroimage}
+                text={text}
+                titular={titular}
+                onNext={this.nextSection}
+              />
+            }
+            {level === 2 &&
+              <Preguntas
+                onNext={this.nextSection}
+              />
+            }
+            {level === 3 &&
+              <Resultado
+                onNext={this.nextSection}
+              />
+            }
+            {level === 4 &&
+              <Followme />
+            }
         </div>
     )
   }
 }
 
-export default FormContainer
+export default App
