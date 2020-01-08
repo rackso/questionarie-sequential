@@ -45,7 +45,7 @@ class App extends Component {
     // 3: damos el resultado y pedimos el twitter
     // 4: recordamos el follow si quiere ver el desglose de preguntas y estar en el ranking
     return (
-        <div className="questionaire">
+        <div className="app">
             {level === 0 && <WaitForIt />}
             {level === 1 &&
               <Presentation

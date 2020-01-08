@@ -1,2 +1,11 @@
 $c-black: #000000;
 $c-white: #ffffff;
+
+$p-m: 8px;
+$p-s: $p-m - 2;
+$p-xs: $p-m - 4;
+$p-l: $p-m + 2;
+$p-xl: $p-m + 4;
+
+$screen-max-width: 520px;
+$screen-min-height: 400px;
