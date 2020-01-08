@@ -7,8 +7,10 @@ class WaitForIt extends Component {
 
   render() {
     return (
-      <div>
-        <div>spinner</div>
+      <div className="waitforit">
+        <div class="loading">
+            <div class="loader"></div>
+        </div>
       </div>
     )
   }

@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   nextSection () {
-      debugger
       this.setState({ level: this.state.level++ })
   }
 
