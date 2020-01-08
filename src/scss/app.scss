@@ -4,6 +4,9 @@ body {
     background-color: $c-white;
     color: $c-black;
     margin: 0;
+    font-family: 'Arial';
+    font-size: $fs-m;
+    font-weight: $fw-m;
 }
 
 .app {

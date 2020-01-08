@@ -29,7 +29,13 @@ class App extends Component {
 
   nextSection () {
       debugger
-      this.setState({ level: this.state.level++ })
+      this.setState({ level: this.state.level + 1 })
+  }
+
+  getQuestions (data) {
+    return data.questions.map(q => {
+      return q
+    })
   }
 
   render() {
@@ -53,17 +59,18 @@ class App extends Component {
                 image={imagen || defaultintroimage}
                 text={text}
                 titular={titular}
-                onNext={this.nextSection}
+                onNext={() => this.nextSection()}
               />
             }
             {level === 2 &&
               <Preguntas
-                onNext={this.nextSection}
+                questions={this.getQuestions(data)}
+                onNext={() => this.nextSection()}
               />
             }
             {level === 3 &&
               <Resultado
-                onNext={this.nextSection}
+                onNext={() => this.nextSection()}
               />
             }
             {level === 4 &&

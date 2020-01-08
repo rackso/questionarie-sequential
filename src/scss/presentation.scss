@@ -1,0 +1,18 @@
+@import './_settings';
+
+.presentation {
+    .imgcrop {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    img {
+        margin-top: -100px;
+        width: 100%;
+    }
+
+    p.titular {
+        font-size: $fs-xl;
+        font-weight: $fw-xl;
+    }
+}

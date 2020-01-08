@@ -141,8 +141,7 @@ const fake = {
     ],
     userhash: 'userhash',
     text: 'texto introductorio del test',
-    titular: 'titular',
-    imagen: ''
+    titular: 'titular'
   }
 
 export default fake
