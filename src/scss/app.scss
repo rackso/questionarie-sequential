@@ -3,4 +3,12 @@
 body {
     background-color: $c-white;
     color: $c-black;
+    margin: 0;
+}
+
+.app {
+    max-width: $screen-max-width;
+    min-height: $screen-min-height;
+    padding: $p-m;
+    margin: 0 auto;
 }
